@@ -219,6 +219,7 @@ graph LR
 
 ## 📁 Project Structure
 
+```
 AgentCore/
 ├── app/
 │   ├── agents/
