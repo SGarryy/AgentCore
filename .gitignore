@@ -1,0 +1,25 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Model files (too large for github)
+models/*.pkl
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
+
+# Test files
+test_nlp.py
+test_ml.py
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
