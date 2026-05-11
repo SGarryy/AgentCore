@@ -1,0 +1,61 @@
+TRAINING_DATA = [
+    # HR Agent
+    ("onboard new employee John to the engineering team", "hr_agent"),
+    ("hire a new developer for the backend team", "hr_agent"),
+    ("set up payroll for new staff member", "hr_agent"),
+    ("recruit candidates for the sales position", "hr_agent"),
+    ("employee joining next Monday needs setup", "hr_agent"),
+    ("create profile for new team member Sarah", "hr_agent"),
+    ("add new hire to the HR system", "hr_agent"),
+    ("process onboarding documents for new recruit", "hr_agent"),
+    ("staff induction for three new joiners", "hr_agent"),
+    ("update payroll with new employee details", "hr_agent"),
+
+    # Finance Agent
+    ("reconcile last month invoices and flag duplicates", "finance_agent"),
+    ("find duplicate payments in billing system", "finance_agent"),
+    ("review expense reports for Q3", "finance_agent"),
+    ("process vendor invoice for payment", "finance_agent"),
+    ("budget allocation for new project", "finance_agent"),
+    ("flag suspicious billing entries", "finance_agent"),
+    ("reconcile accounts payable this week", "finance_agent"),
+    ("check for duplicate invoice submissions", "finance_agent"),
+    ("generate expense summary for finance team", "finance_agent"),
+    ("payment processing for outstanding invoices", "finance_agent"),
+
+    # IT Agent
+    ("triage this bug login page crashes on mobile", "it_agent"),
+    ("fix the authentication error on dashboard", "it_agent"),
+    ("ticket raised for server downtime issue", "it_agent"),
+    ("support request for VPN access problem", "it_agent"),
+    ("crash report from production environment", "it_agent"),
+    ("resolve the database connection error", "it_agent"),
+    ("user reported issue with email sync", "it_agent"),
+    ("bug in payment gateway needs immediate fix", "it_agent"),
+    ("triage incoming support tickets by severity", "it_agent"),
+    ("error 500 on checkout page investigate now", "it_agent"),
+
+    # Sales Agent
+    ("generate leads from retail sector contacts", "sales_agent"),
+    ("route new prospect to sales team", "sales_agent"),
+    ("qualify inbound leads from marketing campaign", "sales_agent"),
+    ("assign customer deal to regional sales rep", "sales_agent"),
+    ("follow up with prospects from last week", "sales_agent"),
+    ("score leads based on engagement data", "sales_agent"),
+    ("convert trial users to paid customers", "sales_agent"),
+    ("pitch enterprise plan to new prospect", "sales_agent"),
+    ("update CRM with new customer details", "sales_agent"),
+    ("identify high value leads for outreach", "sales_agent"),
+
+    # Operations Agent
+    ("schedule weekly sync meeting for all teams", "operations_agent"),
+    ("procure office supplies for new branch", "operations_agent"),
+    ("coordinate with vendor for supply delivery", "operations_agent"),
+    ("manage logistics for product shipment", "operations_agent"),
+    ("order equipment for new team members", "operations_agent"),
+    ("schedule maintenance for office systems", "operations_agent"),
+    ("vendor onboarding for new supplier", "operations_agent"),
+    ("procurement request for server hardware", "operations_agent"),
+    ("plan logistics for upcoming company event", "operations_agent"),
+    ("coordinate supply chain for Q4 orders", "operations_agent"),
+]
