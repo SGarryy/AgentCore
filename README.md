@@ -1,6 +1,6 @@
 # 🧠 AgentCore — Intelligent Agent Orchestration Engine
 
-> Built as a portfolio project inspired by enterprise AI agent platforms. AgentCore demonstrates how natural language input can be intelligently parsed, classified, routed to specialized agents, and summarized using a local LLM — all without a single paid API.
+> Built as a portfolio project inspired by enterprise AI agent platforms. AgentCore demonstrates how natural language input can be intelligently parsed, classified, routed to specialized agents, and summarized using a local LLM, all without a single paid API.
 
 ![Python](https://img.shields.io/badge/Python-3.13-blue)
 ![spaCy](https://img.shields.io/badge/NLP-spaCy-09A3D5)
@@ -13,7 +13,7 @@
 
 ## 📌 What is AgentCore?
 
-AgentCore is a **mini intelligent agent orchestration engine** — a simplified version of the core intelligence layer behind enterprise AI platforms like those built by modern agent-marketplace companies.
+AgentCore is a **mini intelligent agent orchestration engine**, a simplified version of the core intelligence layer behind enterprise AI platforms like those built by modern agent-marketplace companies.
 
 You type a natural language request. AgentCore:
 1. **Understands** it using NLP
@@ -80,7 +80,7 @@ graph TB
 
 ## 🔄 Data Flow Diagram
 
-### Level 0 — Context Diagram
+### Level 0 - Context Diagram
 
 ```mermaid
 graph LR
@@ -90,7 +90,7 @@ graph LR
 
 ---
 
-### Level 1 — System DFD
+### Level 1 - System DFD
 
 ```mermaid
 graph TD
@@ -110,7 +110,7 @@ graph TD
 
 ---
 
-### Level 2 — ML Router Detail
+### Level 2 - ML Router Detail
 
 ```mermaid
 graph TD
@@ -303,7 +303,7 @@ Open `http://localhost:8501` in your browser.
 
 - [ ] Add SQLite logging for all agent executions
 - [ ] Train on larger dataset for higher accuracy
-- [ ] Add feedback loop — user rates responses, model retrains
+- [ ] Add feedback loop, user rates responses, model retrains
 - [ ] Plug in real APIs (Gmail, Jira, Slack) via tool-use
 - [ ] Replace LogReg with fine-tuned BERT for better intent classification
 - [ ] Add multi-agent chaining (one task triggers multiple agents)
@@ -319,4 +319,4 @@ Built as a targeted portfolio project demonstrating NLP pipeline design, ML text
 
 ## 📄 License
 
-MIT License — free to use, modify, and distribute.
+MIT License, free to use, modify, and distribute.
