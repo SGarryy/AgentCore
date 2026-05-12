@@ -1,16 +1,34 @@
-from .base_agent import BaseAgent
+"""Sales & Lead Routing Agent."""
+
 import random
+from typing import List, Tuple
+from app.agents.base_agent import BaseAgent, ExecutionContext
+from app.utils.ids import generate_lead_id
+
 
 class SalesAgent(BaseAgent):
+    """Agent for sales and lead routing."""
+
     def __init__(self):
+        """Initialize Sales agent."""
         super().__init__("Sales & Lead Routing Agent")
 
-    def run(self, task_data: dict) -> dict:
-        entities = task_data.get("entities", {})
-        orgs = entities.get("orgs", ["Unknown Sector"])
+    def process_entities(self, ctx: ExecutionContext) -> Tuple[List[str], str]:
+        """
+        Process sales lead routing.
+
+        Args:
+            ctx: Execution context with entities
+
+        Returns:
+            Tuple of (steps, output_summary)
+        """
+        orgs = ctx.entities.get("orgs", [])
         sector = orgs[0] if orgs else "General"
+
+        # Simulate lead generation
         leads = random.randint(3, 10)
-        top_lead = f"Company-{random.randint(100,999)}"
+        top_lead = generate_lead_id()
 
         steps = [
             f"✅ Scanned lead database for sector: {sector}",
@@ -19,9 +37,11 @@ class SalesAgent(BaseAgent):
             f"✅ Routed leads to sales team",
             f"✅ CRM updated with new prospects",
         ]
+
         output = (
             f"Found {leads} qualified leads in {sector} sector. "
             f"Top prospect: {top_lead}. "
             f"All leads routed to sales team and CRM updated."
         )
-        return self.success(steps, output)
+
+        return steps, output

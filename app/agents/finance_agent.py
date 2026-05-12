@@ -1,15 +1,33 @@
-from .base_agent import BaseAgent
+"""Finance Reconciliation Agent."""
+
 import random
+from typing import List, Tuple
+from app.agents.base_agent import BaseAgent, ExecutionContext
+from app.constants import DEFAULT_DUPLICATES_RANGE
+
 
 class FinanceAgent(BaseAgent):
+    """Agent for finance reconciliation tasks."""
+
     def __init__(self):
+        """Initialize Finance agent."""
         super().__init__("Finance Reconciliation Agent")
 
-    def run(self, task_data: dict) -> dict:
-        entities = task_data.get("entities", {})
-        dates = entities.get("dates", ["last month"])
+    def process_entities(self, ctx: ExecutionContext) -> Tuple[List[str], str]:
+        """
+        Process finance reconciliation task.
+
+        Args:
+            ctx: Execution context with entities
+
+        Returns:
+            Tuple of (steps, output_summary)
+        """
+        dates = ctx.entities.get("dates", [])
         period = dates[0] if dates else "last month"
-        duplicates = random.randint(1, 5)
+
+        # Simulate finding duplicates
+        duplicates = random.randint(*DEFAULT_DUPLICATES_RANGE)
         total = random.randint(20, 100)
 
         steps = [
@@ -19,9 +37,11 @@ class FinanceAgent(BaseAgent):
             f"✅ Generated reconciliation report",
             f"✅ Logged findings to finance system",
         ]
+
         output = (
             f"Reconciliation complete for {period}. "
             f"Scanned {total} invoices, found {duplicates} duplicates. "
             f"Report generated and flagged for review."
         )
-        return self.success(steps, output)
+
+        return steps, output
